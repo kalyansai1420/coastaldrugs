@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+body {
+  min-height: 120vh;
+}
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+}
+option {
+  padding: 20px 0px;
+}
+/*-----------header-------*/
+header.sticky .navigation-1 li a {
+  color: #111;
+}
+header.sticky .navigation-1 li a:hover {
+  color: #63c0dd;
+}
+header .navigation-1 {
+  position: relative;
+  display: flex;
+}
+header .navigation-1 li {
+  list-style: none;
+  margin-left: 30px;
+}
+header .navigation-1 li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+}
+header .navigation-1 li a:hover {
+  color: #63c0dd;
+}
+/*---------Contact----------*/
+.contact-cd {
+  display: flex;
+  margin: 100px 150px;
+}
+.mr-n {
+  position: relative;
+  border-radius: 5px;
+  margin-left: 37px;
+  font-size: 18px;
+}
+.br-n {
+  border: none;
+}
+.ips {
+  width: 300px;
+  height: 55px;
+  border-radius: 5px;
+  padding: 0px 55px;
+  font-size: 18px;
+}
+.ips-1 {
+  padding: 10px 55px;
+}
+.col-1 {
+  position: relative;
+  width: 300px;
+  height: 55px;
+  border-radius: 5px;
+  margin: auto;
+  font-size: 18px;
+}
+.col-2 {
+  position: relative;
+
+  border-radius: 5px;
+  margin: auto;
+  font-size: 18px;
+}
+.pos-m {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  color: #63c0dd;
+  background-color: #daf0f7;
+  padding: 10px;
+  border-radius: 100%;
+}
+.pos-u {
+  position: relative;
+  top: -47px;
+  left: 13px;
+  color: #63c0dd;
+  background-color: #daf0f7;
+  padding: 10px;
+  border-radius: 100%;
+}
+.pos-u-1 {
+  position: relative;
+  top: -47px;
+  left: 13px;
+  color: #63c0dd;
+  background-color: #daf0f7;
+  padding: 10px;
+  border-radius: 100%;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+}
+.pos-c {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+}
+.mr-r {
+  margin-right: 0px;
+}
+.mr-b {
+  margin-bottom: 30px;
+}
+.mr-t {
+  margin-top: 30px;
+}
+.bx-s {
+  box-shadow: 0 5px 20px 0 rgb(61 82 96 / 15%);
+}
+.para {
+  display: flex;
+  align-items: center;
+}
+.para i {
+  font-size: 28px;
+  padding: 20px;
+  color: #fff;
+}
+.left-contact-cd {
+  background-color: #63c0dd;
+  padding: 30px;
+  flex: 0.3;
+}
+.link a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+.social {
+  padding: 20px 18px;
+}
+.social i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 100%;
+  border: 1px solid white;
+  color: white;
+  margin: 5px;
+}
+.left-contact-cd > h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  padding: 20px 0px;
+}
+.left-contact-cd p {
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 0px;
+}
+.left-contact-cd .line {
+  width: 80%;
+  height: 0.8px;
+  background-color: #e1e1e1;
+  text-align: center;
+  margin: 30px auto;
+}
+.right-contact-cd {
+  flex: 0.7;
+  padding: 10px 30px;
+  background-color: #f9f9f9;
+  padding-bottom: 40px;
+}
+.right-contact-cd > h1 {
+  font-size: 38px;
+  padding: 30px 0px;
+  font-weight: 500;
+}
+.centered-right-contact-cd {
+  padding: 20px;
+  background-color: #daf0f7;
+  box-shadow: 0 23px 49px 0 rgb(61 82 96 / 15%);
+}
+.centered-right-contact-cd form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.top-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+#message {
+  min-width: 43.5vw;
+  height: 200px;
+}
+#btn {
+  width: 25%;
+  font-size: 1em;
+  color: #fff;
+  background-color: #63c0dd;
+  border: 1px solid #63c0dd;
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 20px 32px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s ease-in-out;
+  border-radius: 99px;
+}
+.check-box-con {
+  padding: 0px 40px;
+}
+.check-box-con label {
+  font-size: 18px;
+}
+.check-box-con label a {
+  text-decoration: none;
+  color: #63c0dd;
+}
+input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  outline: none;
+
+  cursor: pointer;
+}
+input[type="checkbox"]:checked {
+  accent-color: #63c0dd;
+}
+/*-------------iframe----------------*/
+.iframe-con {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 150px 0px 150px;
+}
+.iframe-con div h1 {
+  font-size: 26px;
+  font-weight: 500;
+  padding: 15px 5px;
+}
+iframe {
+  width: 600px;
+  height: 450px;
+}
+@media (max-width: 1100px) {
+  header .navigation-1 {
+    display: none;
+  }
+  header .navigation-1.active {
+    margin-top: -10px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 68px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+  }
+  header .navigation-1 li {
+    margin-left: 0;
+  }
+  header.sticky .navigation-1 li a {
+    margin-top: 50px;
+  }
+  header .navigation-1 li a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.6em;
+    font-weight: 300;
+  }
+  .contact-cd {
+    flex-direction: column;
+    margin: 100px 0px;
+  }
+  .centered-right-contact-cd form {
+    display: flex;
+    flex-direction: row;
+  }
+  .mr-n {
+    margin-left: 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .check-box-con {
+    padding: 0px;
+  }
+  .right-contact-cd {
+    flex: 0.7;
+    padding: 10px 30px;
+    background-color: #f9f9f9;
+    padding-bottom: 40px;
+    width: 100vw;
+  }
+  iframe {
+    width: 500px;
+    height: 450px;
+  }
+  .iframe-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 10px 0px 10px;
+  }
+
+  .iframe-con div h1 {
+    font-size: 26px;
+    font-weight: 500;
+    padding: 15px 5px;
+  }
+  #btn {
+    width: 50%;
+    margin: 20px 0px;
+  }
+}
+@media (max-width: 480px) {
+  iframe {
+    width: 300px;
+    height: 250px;
+  }
+}

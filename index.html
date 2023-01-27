@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coastal Drugs</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body onload="myFun()">
+    <header>
+      <a href="index.html" class="logo">
+        <img src="./icons/logo.png" alt="" />
+      </a>
+      <div class="menuToggle" onclick="toggleMenu();"></div>
+      <ul class="navigation">
+        <li><a href="./index.html" onclick="toggleMenu();">Home</a></li>
+        <li><a href="./about.html" onclick="toggleMenu();">About Us</a></li>
+        <li><a href="./products.html" onclick="toggleMenu();">Products</a></li>
+        <li><a href="./infra.html" onclick="toggleMenu();">Infrastructure</a></li>
+        <li><a href="contact.html" onclick="toggleMenu();">Contact Us</a></ul>
+       
+      </ul>
+    </header>
+
+    <section class="hero" id="hero">
+
+      <div class="hero-content">
+        <div class="header">
+          <h3>
+            Living our mission <br />
+            of creating healthier, <br />
+            happier communities globally
+          </h3>
+          <a href="#" class="btn"> Get Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-title">
+        <h2>About Costal Drug</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-content-left">
+          <p>
+            Coastal Drugs is a private company was incorporated in the year 2019
+            as a partnership firm under the Companies Act at Hyderabad,
+            Telangana, India. And the Manufacturing facility constructed at
+            Athivaram, APIIC Industrial park, Ozili Mandal, SPSR Nellore (Dt),
+            Andhra Pradesh.
+            <br><br> We at Coastal Drugs Capable of handling complex and
+            hazardous reactions. The manufacturing facility comply with all
+            Regulatory guidelines and requirements of current Good Manufacturing
+            Practices (cGMP).
+            <br><br>
+            We at Coastal Drugs Capable of handling complex and
+            hazardous reactions. The manufacturing facility comply with all
+            Regulatory guidelines and requirements of current Good Manufacturing
+            Practices (cGMP).
+          </p>
+
+          <a href="#" class="btn about-btn">Read More</a>
+        </div>
+        <div class="about-content-right">
+          <img
+            class="img_1"
+            src="./img/square (2).jpeg"
+            alt=""
+          />
+          <img
+            class="img_2"
+            src="./img/square (1).jpeg"
+            alt=""
+          />
+        </div>
+      </div>
+      <!------------------------- Counter --------------------->
+      <div class="counter">
+        <div class="counter-row">
+          <div class="col-sm-3">
+            <img src="./icons/observation.png" alt="" />
+            <h2 data-max="100">
+              + <br />
+              <span class="h2-color"> Employees </span>
+            </h2>
+          </div>
+          <div class="col-sm-3">
+            <img src="./icons/eco-factory.png" alt="" />
+            <h2 data-max="65000">
+              sqFt <br />
+
+              <span class="h2-color"> Built-up Area </span>
+            </h2>
+          </div>
+    
+          <div class="col-sm-3">
+            <img src="./icons/costumer.png" alt="" />
+            <h2 data-max="15" id="test">
+              + <br />
+              <span class="h2-color"> Clients </span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="infrastructure" id="infrastructure">
+      <div class="infrastructure-title">
+        <h2>Our Infrastructure</h2>
+      </div>
+      <div class="infrastructure-img">
+        <div class="images">
+          <img src="./img/1 (5).jpeg" alt="" />
+          <img src="./img/1 (11).jpeg" alt="" />
+          <img src="./img/1 (1).jpeg" alt="" />
+        </div>
+
+        <span id="dots"></span
+        ><span id="more">
+          <div class="images-more">
+            <img src="./img/1 (3).jpeg" alt="" />
+            <img src="./img/1 (2).jpg" alt="" />
+            <img src="./img/1 (12).jpeg" alt="" />
+          </div>
+        </span>
+        <button onclick="myFunction_a()" class="btn infra-btn" id="myBtn_a">
+          View more
+        </button>
+      </div>
+    </section>
+
+    <section class="location" id="location">
+      <div class="location-title">
+        <h2>Our Location</h2>
+      </div>
+      <div class="location-content">
+        <div class="location-content-left">
+          <h4>
+            We Are Always
+            <br />
+            Here To Help You
+          </h4>
+          <div class="location-contact">
+            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.3607109061318!2d78.39232431495967!3d17.490286288017018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9192b1ac803f%3A0x4beaeb9e60a41f4b!2sSai%20Plaza%20Apartment!5e0!3m2!1sen!2sin!4v1674795251461!5m2!1sen!2sin">
+              <img src="./icons/icons8-map-marker.gif" alt="" />Visit Us
+            </a>
+            <p>
+              SAI PLAZA, MIG 366, 4th Floor, KPHB Colony, Kukatpally, Hyderabad
+            Telangana - 500072
+            </p>
+          </div>
+          <div class="location-contact">
+            <a href="mailto:info@coastaldrugs.in">
+              <img src="./icons/icons8-mail.gif" alt="" />
+              Email Us 
+            </a>
+            <p>
+             info@coastaldrugs.in
+            </p>
+          </div>
+          <div class="location-contact">
+            <a href="">
+              <img src="./icons/icons8-phone-ringing.gif" alt="" />Lets talk
+            </a>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              accusamu
+            </p>
+          </div>
+        </div>
+        <div class="location-content-right">
+          <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.3607109061318!2d78.39232431495967!3d17.490286288017018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9192b1ac803f%3A0x4beaeb9e60a41f4b!2sSai%20Plaza%20Apartment!5e0!3m2!1sen!2sin!4v1674795251461!5m2!1sen!2sin"
+     
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+          <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.5372794693617!2d79.83620901491575!3d13.926583890234543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d1a2e61512fdb%3A0xb6ed906127505ebe!2sCrest%20Cellulose%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1674795470253!5m2!1sen!2sin"
+   
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="cta">
+      <div class="cta-title">
+        <h2>Let's build a healthy life</h2>
+      </div>
+      <div class="cta-btn">
+        <a href="#" class="btn"><p>Contact Us</p></a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="sec about-us">
+          <img src="./icons/logo.png" alt="" />
+          <p>
+            Coastal Drugs is a private company was incorporated in the year 2019 as a partnership firm under the Companies Act at Hyderabad, Telangana, India. And the Manufacturing facility constructed at Athivaram, APIIC Industrial park, Ozili Mandal, Tirupati (Dt), Andhra Pradesh.
+          </p>
+          <ul class="sci">
+          
+            <li>
+              <a href="#"><i class="fa fa-google" aria-hidden="true"></i> </a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> </a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a>
+            </li>
+         
+          </ul>
+        </div>
+        <div class="sec quickLinks">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./products.html">Products</a></li>
+            <li><a href="./infra.html">Infrastructure</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="sec quickLinks">
+          <h2>Products</h2>
+          <ul>
+            <li><a href="./products.html">Triphenylphosphorane</a></li>
+            <li><a href="./products.html">Acetic acid</a></li>
+            <li><a href="./products.html">Diaminopyridine</a></li>
+            <li><a href="./products.html">Quinuclidinol</a></li>
+            <li><a href="./products.html">Ethylamine</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="copyrightText">
+      <p>Crafted by ShaPages</p>
+    </div>
+
+    <script type="text/javascript">
+      const slideImg = document.getElementById("hero");
+      console.log(slideImg.style);
+      var imagesArray = Array(
+        "radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 98%),url('./img/cd (1).jpeg')",
+        "radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 98%),url('./img/cd (2).jpeg')",
+        "radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 98%),url('./img/cd (3).jpeg')",
+        "radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 98%),url('./img/cd (4).jpeg')",
+        "radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 98%),url('./img/cd (5).jpeg')"
+      );
+      var leng = imagesArray.length;
+      i = 0;
+      function myFun() {
+        if (i > leng - 1) {
+          i = 0;
+        }
+        slideImg.style.backgroundImage = imagesArray[i];
+        i++;
+        setTimeout("myFun()", 2000);
+      }
+
+      function myFunction_a() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn_a");
+
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "View more";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "View less";
+          moreText.style.display = "inline";
+        }
+      }
+
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+      function toggleMenu() {
+        const menuToggle = document.querySelector(".menuToggle");
+        const navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+
+      function inVisible(element) {
+        //Checking if the element is
+        //visible in the viewport
+        var WindowTop = $(window).scrollTop();
+        var WindowBottom = WindowTop + $(window).height();
+        var ElementTop = element.offset().top;
+        var ElementBottom = ElementTop + element.height();
+        //animating the element if it is
+        //visible in the viewport
+        if (ElementBottom <= WindowBottom && ElementTop >= WindowTop)
+          animate(element);
+      }
+
+      function animate(element) {
+        //Animating the element if not animated before
+        if (!element.hasClass("ms-animated")) {
+          var maxval = element.data("max");
+          var html = element.html();
+          element.addClass("ms-animated");
+          $({
+            countNum: element.html(),
+          }).animate(
+            {
+              countNum: maxval,
+            },
+            {
+              //duration 5 seconds
+              duration: 5000,
+              easing: "linear",
+              step: function () {
+                element.html(Math.floor(this.countNum) + html);
+              },
+              complete: function () {
+                A;
+                element.html(this.countNum + html);
+              },
+            }
+          );
+        }
+      }
+
+      //When the document is ready
+      $(function () {
+        //This is triggered when the
+        //user scrolls the page
+        $(window).scroll(function () {
+          //Checking if each items to animate are
+          //visible in the viewport
+          $("h2[data-max]").each(function () {
+            inVisible($(this));
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
