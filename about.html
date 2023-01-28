@@ -4,15 +4,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="about.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
       <link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">
-    <title>Document</title>
+       <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <title>About Us | Coastal Drugs</title>
 </head>
 <body>
+    <header>
+      <a href="index.html" class="logo">
+        <img src="./icons/logo.png" alt="" />
+      </a>
+      <div class="menuToggle" onclick="toggleMenu();"></div>
+      <ul class="navigation">
+        <li><a href="./index.html" onclick="toggleMenu();">Home</a></li>
+        <li><a href="./about.html" onclick="toggleMenu();">About Us</a></li>
+        <li><a href="./products.html" onclick="toggleMenu();">Products</a></li>
+        <li><a href="./infrastructure.html" onclick="toggleMenu();">Infrastructure</a></li>
+        <li><a href="contact.html" onclick="toggleMenu();">Contact Us</a></ul>
+       
+      </ul>
+    </header>
     <section class="about-section">
-        <div class="container">
-            <div class="row">                
+        <div class="about-container container">
+            <div class="about-content row">                
                 <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
                     <div class="inner-column">
                         <div class="sec-title">
@@ -29,12 +49,12 @@
                             <li>Facility is ISO9001:2015, ISO14001:2015, ISO45001:2018 certified, Local GMP application is under process.</li>
                         </ul>
                         <div class="btn-box">
-                            <a href="#" class="theme-btn btn-style-one">Contact Us</a>
+                            <a href="./contact.html" class="btn">Contact Us</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Image Column -->
+                
                 <div class="image-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column wow fadeInLeft">
                         <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img src="https://i.ibb.co/QP6Nmpf/image-1-about.jpg" alt=""></a></figure>
@@ -44,6 +64,67 @@
             </div>
         </div>
     </section>
+
+    <footer>
+      <div class="container">
+        <div class="sec about-us">
+          <img src="./icons/logo.png" alt="" />
+          <p>
+            Coastal Drugs is a private company was incorporated in the year 2019 as a partnership firm under the Companies Act at Hyderabad, Telangana, India. And the Manufacturing facility constructed at Athivaram, APIIC Industrial park, Ozili Mandal, Tirupati (Dt), Andhra Pradesh.
+          </p>
+          <ul class="sci">
+          
+            <li>
+              <a href="#"><i class="fa fa-google" aria-hidden="true"></i> </a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> </a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a>
+            </li>
+         
+          </ul>
+        </div>
+        <div class="sec quickLinks">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./products.html">Products</a></li>
+            <li><a href="./infrastructure.html">Infrastructure</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="sec quickLinks">
+          <h2>Products</h2>
+          <ul>
+            <li><a href="./products.html">Triphenylphosphorane</a></li>
+            <li><a href="./products.html">Acetic acid</a></li>
+            <li><a href="./products.html">Diaminopyridine</a></li>
+            <li><a href="./products.html">Quinuclidinol</a></li>
+            <li><a href="./products.html">Ethylamine</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="copyrightText">
+      <p>Crafted by ShaPages</p>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+      function toggleMenu() {
+        const menuToggle = document.querySelector(".menuToggle");
+        const navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
 
 </body>
 

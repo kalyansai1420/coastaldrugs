@@ -22,13 +22,13 @@ body {
 .btn {
 
   width: fit-content;
-  
+  color: #111;
   border: 1px solid #63C0DD;
   display: inline-block;
   padding: 10px 20px;
   text-transform: uppercase;
   text-decoration: none;
-  
+  border-radius: 99px;
   transition: 0.5s ease-in-out;
   
 }
@@ -125,6 +125,7 @@ table {
   max-width: 1260px;
   margin: 10px auto;
   width: 100%;
+  
 }
 
 thead th {
@@ -147,7 +148,7 @@ tr:nth-child(even) {
 th, td {
   text-align: left;
   padding: 20px;
-  font-weight: 300;
+  font-weight: 500;
   
 }
 .table {
@@ -367,7 +368,7 @@ footer p {
     background-position: center;
     cursor: pointer;
     transition: 0.3s;
-    filter: invert(0);
+    filter: invert(1);
   }
   .menuToggle.active {
     background: url(./img/close.png);
@@ -440,9 +441,19 @@ footer p {
     padding: 8px 40px;
   }
 }
+@media (max-width: 680px) {
+  /* table{
+    overflow-x: auto;
+overflow-y : hidden;
+  } */
+  .product-list{
+    overflow-x: auto;
+overflow-y : hidden;
+  }
+}
 @media (max-width: 480px) {
   .menuToggle{
-     filter: invert(0);
+     filter: invert(1);
   }
   header.sticky {
     background-color: #fff;
@@ -464,6 +475,16 @@ footer p {
   }
 
 
+  thead .col{
+    width: fit-content;
+  }
+
+  tbody tr td{
+    width: fit-content;
+    min-width: 150px;
+
+  }
+  
  
 
 

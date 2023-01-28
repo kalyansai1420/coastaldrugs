@@ -116,11 +116,8 @@ header .navigation li a:hover {
     text-align: left;
 }
 .hero-content > .header h3{
-font-size: 2em;
-
-
+  font-size: 2em;
 	position: relative;
-
 	color: #fff;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
     padding: 0px 0px 5px 0px;
@@ -625,7 +622,7 @@ footer p {
     background-position: center;
     cursor: pointer;
     transition: 0.3s;
-    filter: invert(0);
+    filter: invert(1);
   }
   .menuToggle.active {
     background: url(./img/close.png);
@@ -652,10 +649,27 @@ footer p {
     flex-direction: column;
     padding-bottom: 50px;
   }
+
+  .about-content-right .img_1{
+     top: -30px;
+  left: -50px;
+  }
+  .about-content-right .img_2{
+     top: 230px;
+  left: 250px;
+  }
+  .about-content-right img {
+
+height: 300px;
+object-fit: cover;
+  }
   .about-title h2,
   .infrastructure-title h2,
   .location-title h2,.cta-title h2 {
     font-size: 2.2em;
+  }
+  .counter{
+    margin-top: 30px;
   }
 
   .location-content {
@@ -693,7 +707,7 @@ footer p {
 }
 @media (max-width: 480px) {
   .menuToggle{
-     filter: invert(0);
+     filter: invert(1);
   }
   header.sticky {
     background-color: #fff;
@@ -734,21 +748,28 @@ footer p {
   .about-content-right {
     text-align: center;
     padding: 10px;
+    padding-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+ 
+  .about-content-right .img_1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
   }
   .about-content-right .img_2 {
     position: absolute;
-    top: 5px;
-    left: -15px;
-  }
-  .about-content-right .img_2 {
-    position: absolute;
-    top: 70px;
-    left: 130px;
+    top: 120px;
+    left: 120px;
   }
   .about-content-right img {
     width: auto;
     height: 150px;
     object-fit: cover;
+  }
+  .counter{
+    /* margin-top: 50px; */
   }
   .counter-row {
     display: grid;
@@ -813,5 +834,14 @@ footer p {
   }
   .footer .sec.about-us {
     width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .about-content-right .img_2 {
+    position: absolute;
+    top: 70px;
+    left: 70px;
   }
 }

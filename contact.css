@@ -10,9 +10,7 @@
   width: 0;
   background: transparent;
 }
-body {
-  min-height: 120vh;
-}
+
 textarea:focus,
 input:focus,
 select:focus {
@@ -39,7 +37,7 @@ header .navigation-1 li {
 header .navigation-1 li a {
   text-decoration: none;
   color: #000;
-  font-weight: 300;
+  font-weight: 500;
 }
 header .navigation-1 li a:hover {
   color: #63c0dd;
@@ -48,6 +46,7 @@ header .navigation-1 li a:hover {
 .contact-cd {
   display: flex;
   margin: 100px 150px;
+  height: fit-content;
 }
 .mr-n {
   position: relative;
@@ -347,8 +346,32 @@ iframe {
   }
 }
 @media (max-width: 480px) {
+  .contact-cd {
+margin: 0;
+margin-top: 50px;
+}
   iframe {
     width: 300px;
     height: 250px;
+  }
+  .right-contact-cd{
+    padding: 10px;
+  }
+  .centered-right-contact-cd{
+    padding: 0;
+  }
+ 
+footer {
+    padding: 10px;
+    padding-top: 50px;
+  }
+  footer .container img{
+  height: 50px;
+}
+  .sec {
+    width: 100%;
+  }
+  .footer .sec.about-us {
+    width: 100%;
   }
 }

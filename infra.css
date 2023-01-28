@@ -1,214 +1,639 @@
-html {
-    /* This is done so that 1rem = 10px taking into consideration that default font-size of browser is 16px and then from now on I'll use rem as a length unit. */
-    font-size: 62.5%;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Rubik", sans-serif;
-    line-height: 1;
-    color: #555; /* This is our main text color*/
-    font-weight: 400;
-background-color: rgba(68, 128, 226, 0.1) ;
-  }
-  
-  .section-hero {
-    background-color: rgba(68, 128, 226, 0.1) ;
-    padding: 8.4rem 0 9.6rem 0;
-  }
-  
-  .hero {
-    /* We'll not use px to define the length and will use rem. */
-    /* max-width: 1300px; */
-    max-width: 130rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 3.2rem;
-    margin: 0 auto;
-    align-items: center;
-    gap: 0 9.6rem;
-  }
-  
-  .heading-primary {
-    font-size: 5.2rem;
-    color: #333;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    line-height: 1.05;
-    margin-bottom: 3.6rem;
-  }
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
+}
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+body {
+  min-height: 120vh;
+}
 
-  .secondar-primary{
-    font-size: 2rem;
-    color: #333;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    line-height: 1.05;
-    margin-bottom: 3.6rem;
+/* ---------------------------Header--------------------- */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.5s;
+  background: #fff;
+  height: fit-content;
+}
+header.sticky {
+  background: #fff;
+  height: fit-content;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+header .logo {
+  margin-top: -10px;
+}
+header .logo > img {
+  height: 40px;
+}
+header.sticky .logo {
+  margin-top: -10px;
+}
+header.sticky .logo > img {
+  height: 40px;
+}
+
+header.sticky .navigation li a {
+  color: #111;
+}
+header.sticky .navigation li a:hover {
+  color: #63C0DD;
+}
+header .navigation {
+  position: relative;
+  display: flex;
+}
+header .navigation li {
+  list-style: none;
+  margin-left: 30px;
+}
+header .navigation li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+header .navigation li a:hover {
+  color: #63C0DD;
+}
+
+/* ---------------------------Hero--------------------- */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+.hero-title {
+  text-align: center;
+}
+
+.hero-title h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  padding-top:30px;
+ 
+}
+
+.hero-text{
+  flex: 0.5;
+}
+.hero-text > h2 {
+  font-size: 2em;
+
+}
+.hero-text .hero-points{
+  padding: 50px;
+  width: 80%;
+}
+.list-style-one{
+position:relative;
+}
+
+.list-style-one li{
+position:relative;
+font-size:16px;
+line-height:26px;
+color: #222222;
+font-weight:400;
+padding-left:35px;
+margin-bottom: 12px;
+list-style: none;
+}
+
+.list-style-one li:before {
+content: "\f058";
+position: absolute;
+left: 0;
+top: 0px;
+display: block;
+font-size: 18px;
+padding: 0px;
+color: #63C0DD;
+font-weight: 600;
+-moz-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+font-style: normal;
+font-variant: normal;
+text-rendering: auto;
+line-height: 1.6;
+font-family: "Font Awesome 5 Free";
+}
+
+.list-style-one li a:hover{
+color: #44bce2;
+}
+.hero-text .acc-p1 p {
+  font-weight: 400;
+  font-size: 1.5em;
+}
+.hero-text {
+
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.acc-p1 {
+  display: flex;
+}
+.acc-p1 img {
+  height: 20px;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+
+.hero-img-box {
+  flex: 0.5;
+  grid-column: 2/3;
+  grid-row: 1 / 3;
+}
+
+.hero-img {
+  width: 100%;
+  height: 600px;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  border-radius: 9px;
+  /* margin-top: 4.8rem; */
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+
+  transition: background-color 500ms;
+}
+
+.btn--fill:link,
+.btn--fill:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  color: #555;
+  background-color: #fff;
+}
+
+.btn--fill:hover,
+.btn--fill:active {
+  background-color: #cf711f;
+  text-decoration: underline;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  /* Now we'll not use border as in border the outlines are on the outside. Instead we'll use the outline or box-shadow property */
+  box-shadow: inset 0px 0px 0px 3px #fff;
+  text-decoration: underline;
+  /* outline: #fff solid 3px; */
+}
+
+/* We'll create a utility class that can be used for any element by simply adding a class. */
+.margin-right-btn {
+  margin-right: 2.4rem;
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.delivered-imgs img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  outline: #fdf2e9 solid 3px;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #cf711f;
+}
+
+.list-style-one li {
+  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+  color: #222222;
+  font-weight: 400;
+  padding-left: 35px;
+  margin-bottom: 12px;
+}
+
+.list-style-one li:before {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  display: block;
+  font-size: 18px;
+  padding: 0px;
+  color: #63c0dd;
+  font-weight: 600;
+  -moz-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1.6;
+}
+
+.list-style-one li a:hover {
+  color: #44bce2;
+}
+
+.gallery{
+  margin-top: 50px;
+}
+
+.heading-primary-gallery {
+  font-size: 3.5rem;
+  padding-top: 3%;
+  color: #222222;
+}
+.photo-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
+  grid-auto-flow: dense;
+  padding: 4.5%;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/* ---------------------------Footer--------------------- */
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+footer .container .sec {
+  margin-right: 30px;
+}
+footer .container .sec.about-us {
+  width: 40%;
+}
+
+footer .container h2 {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+footer .container img {
+  height: 70px;
+}
+
+footer p {
+  color: #fff;
+}
+.sci {
+  margin-top: 20px;
+  display: flex;
+}
+.sci li {
+  list-style: none;
+}
+.sci li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  /* background: #222; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.sci li a:hover {
+  opacity: 0.5;
+}
+.sci li a .fa {
+  color: #fff;
+  font-size: 20px;
+}
+.quickLinks {
+  position: relative;
+  width: 25%;
+}
+.quickLinks ul li {
+  list-style: none;
+}
+.quickLinks ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.quickLinks ul li a:hover {
+  color: #fff;
+  opacity: 0.8;
+}
+.contact {
+  width: calc(30% - 60px);
+  margin-right: 0 !important;
+}
+.contact .info {
+  position: relative;
+}
+.contact .info li {
+  display: flex;
+  margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1) {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.contact .info li span {
+  color: #999;
+}
+.contact .info li a {
+  color: #999;
+  text-decoration: none;
+}
+.contact .info li a:hover {
+  color: #fff;
+}
+.copyrightText {
+  width: 100%;
+  background: #181818;
+  padding: 8px 100px;
+  text-align: center;
+  /* color: #fff !important; */
+  /* z-index: 100000; */
+}
+.copyrightText p {
+  color: #999;
+}
+
+@media screen and (min-width: 600px) {
+  .card-tall {
+    grid-row: span 2 / auto;
   }
-  
-  .hero-description {
-    font-size: 2rem;
-    line-height: 1.5;
-    margin-bottom: 4.8rem;
+  .card-wide {
+    grid-column: span 2 / auto;
   }
-  
-  .hero-img-box {
-    grid-column: 2/3;
-    grid-row: 1 / 3;
+}
+
+@media (max-width: 1100px) {
+  .menuToggle {
+    filter: invert(0);
   }
-  
-  .hero-img {
-    width: 100%;
-    height: 600px;
+  header,
+  header.sticky {
+    padding: 10px 20px;
   }
-  
-  .btn:link,
-  .btn:visited {
-    display: inline-block;
-    font-size: 2rem;
-    font-weight: 600;
-    font-family: inherit;
-    border: none;
-    cursor: pointer;
-    border-radius: 9px;
-    /* margin-top: 4.8rem; */
-    padding: 1.6rem 3.2rem;
-    text-decoration: none;
-  
-    transition: background-color 500ms;
-  }
-  
-  .btn--fill:link,
-  .btn--fill:visited {
-    background-color: #e67e22;
-    color: #fff;
-  }
-  
-  .btn--outline:link,
-  .btn--outline:visited {
-    color: #555;
+  header.sticky {
     background-color: #fff;
+    height: fit-content;
+    padding: 10px 10px;
   }
-  
-  .btn--fill:hover,
-  .btn--fill:active {
-    background-color: #cf711f;
-    text-decoration: underline;
+  header .logo {
+    margin-top: 10px;
   }
-  
-  .btn--outline:hover,
-  .btn--outline:active {
-    background-color: #fdf2e9;
-    /* Now we'll not use border as in border the outlines are on the outside. Instead we'll use the outline or box-shadow property */
-    box-shadow: inset 0px 0px 0px 3px #fff;
-    text-decoration: underline;
-    /* outline: #fff solid 3px; */
+  header .logo > img {
+    /* background: black; */
+    height: 40px;
   }
-  
-  /* We'll create a utility class that can be used for any element by simply adding a class. */
-  .margin-right-btn {
-    margin-right: 2.4rem;
+  header.sticky .logo {
+    margin-top: 10px;
+    height: 10px;
   }
-  
-  .delivered-meals {
-    display: flex;
-    align-items: center;
-    gap: 3.2rem;
+  header.sticky .logo > img {
+    /* background: black; */
+    height: 40px;
+    margin-top: -10px;
   }
-  
-  .delivered-imgs img {
-    width: 4.8rem;
-    height: 4.8rem;
-    border-radius: 50%;
-    margin-right: -1.6rem;
-    outline: #fdf2e9 solid 3px;
+  header .navigation {
+    display: none;
   }
-  
-  .delivered-text {
-    font-size: 1.8rem;
-    font-weight: 600;
-  }
-  
-  .delivered-text span {
-    color: #cf711f;
-  }
-
-
-  .list-style-one li{
-    position:relative;
-    font-size:16px;
-    line-height:26px;
-    color: #222222;
-    font-weight:400;
-    padding-left:35px;
-    margin-bottom: 12px;
-    }
-    
-    .list-style-one li:before {
-   
-    position: absolute;
+  header .navigation.active {
+    margin-top: -10px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 68px;
     left: 0;
-    top: 0px;
-    display: block;
-    font-size: 18px;
-    padding: 0px;
-    color: #63C0DD;
-    font-weight: 600;
-    -moz-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1.6;
-   
-    }
-    
-    .list-style-one li a:hover{
-    color: #44bce2;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+  }
+  header .navigation li {
+    margin-left: 0;
+  }
+  header.sticky .navigation li a {
+    margin-top: 50px;
+  }
+  header .navigation li a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.6em;
+    font-weight: 300;
+  }
 
+  .menuToggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url(./img/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.3s;
+    filter: invert(1);
+  }
+  .menuToggle.active {
+    background: url(./img/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  header.sticky .menuToggle {
+    filter: invert(1);
+  }
 
-    *{
-        box-sizing: border-box;
-    }
-   
-    h1 {
-        text-align: center;
-    }
+  .hero{
+    height: fit-content;
+  }
+  .hero-content {
+  display: flex;
+  flex-direction: column;
+ 
+  height: fit-content;
+ 
+}
+.hero-text .hero-points{
+  padding: 20px;
+  width: 100%;
+}
 
-    .heading-primary-gallery{
-        font-size: 3.5rem;
-        padding-top: 3%;
-        color: #222222;
-    }
-    .photo-grid {
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        grid-auto-rows: 240px;
-        grid-auto-flow: dense;
-        padding: 4.5%;
-    }
-    .card {
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        text-align: center;
-    }
-    
-    @media screen and (min-width: 600px) {
-        .card-tall {
-            grid-row: span 2 / auto;
-        }
-        .card-wide {
-            grid-column: span 2 / auto;
-        }
-    }
+  footer {
+    padding: 40px;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+
+  footer .container .sec {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  footer .container .sec.aboutus,
+  .quickLinks,
+  .contact {
+    width: 100%;
+  }
+
+  footer .container .sec.about-us {
+    width: fit-content;
+  }
+
+  .copyrightText {
+    padding: 8px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuToggle {
+    filter: invert(1);
+  }
+  header.sticky {
+    background-color: #fff;
+    height: fit-content;
+    padding: 15px 10px;
+  }
+  header .logo {
+    margin-top: 10px;
+  }
+  header .logo > img {
+    height: 40px;
+  }
+  header.sticky .logo {
+    margin-top: 10px;
+    height: 10px;
+  }
+  header.sticky .logo > img {
+    height: 40px;
+  }
+
+  .hero{
+    margin-top:80px ;
+    height: fit-content;
+    padding: 10px;
+  }
+  .hero-text > h2 {
+  font-size: 1.5em;
+
+}
+.hero-text .hero-points{
+  padding: 10px;
+  
+}
+.hero-text .acc-p1 p {
+ 
+  font-size: 1em;
+}
+.acc-p1 img {
+  height: 10px;
+
+}
+.hero-img-box{
+  margin-top: -120px;
+  height: fit-content;
+}
+.hero-img {
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+}
+ .hero-title h2
+  {
+    font-size: 2em;
+  }
+.gallery{
+  margin-top: -50px;
+}
+  footer {
+    padding: 10px;
+    padding-top: 50px;
+  }
+  footer .container img {
+    height: 50px;
+  }
+  .sec {
+    width: 100%;
+  }
+  .footer .sec.about-us {
+    width: 100%;
+  }
+}
