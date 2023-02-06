@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <title>Contact Us | Coastal Drugs</title>
     <link rel="stylesheet" href="contact.css" />
     <link rel="stylesheet" href="style.css" />
@@ -16,6 +16,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./contact.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/integration
+        emailjs.init("user_0ggBS8Oxule52AEBUsjUV");
+      })();
+    </script>
   </head>
   <body>
     <header>
@@ -71,12 +83,13 @@
       <div class="right-contact-cd">
         <h1>Contact Us</h1>
         <div class="centered-right-contact-cd">
-          <form action="">
+          <form action="" id="contact-form">
             <div class="top-form">
               <div class="col-1 mr-b">
                 <input
                   type="text"
-                  id="name"
+                  id="from_name"
+                  name="user_name"
                   class="ips br-n bx-s"
                   placeholder="Your Name"
                   required
@@ -86,7 +99,9 @@
               <div class="col-1 mr-b">
                 <input
                   type="tel"
-                  name=""
+                  id="from_number"
+                  name="contact_number"
+                  pattern="^\d{10}$"
                   id="phone"
                   class="ips bx-s br-n"
                   placeholder="Phone number"
@@ -97,8 +112,8 @@
               <div class="col-1 mr-b">
                 <input
                   type="email"
-                  name=""
-                  id="email-cd"
+                  id="from_email"
+                  name="user_email"
                   class="ips bx-s br-n"
                   placeholder="Email Id"
                   required
@@ -108,7 +123,7 @@
               <div class="col-1 mr-b">
                 <select
                   name="check"
-                  id="check-cd"
+                  id="from_check"
                   class="ips bx-s br-n"
                   required
                 >
@@ -116,8 +131,8 @@
                     Please Select
                   </option>
                   <option value="sales">Sales</option>
-                  <option value="gen">General</option>
-                  <option value="sup">Support</option>
+                  <option value="general">General</option>
+                  <option value="support">Support</option>
                 </select>
                 <i class="fa fa-bookmark pos-u-1"></i>
                 <i class="fa fa-chevron-down pos-c"></i>
@@ -125,7 +140,8 @@
             </div>
             <div class="col-2">
               <textarea
-                name=""
+                name="message"
+                id="from_message"
                 cols="30"
                 rows="10"
                 id="message"
@@ -136,12 +152,18 @@
             </div>
 
             <div class="check-box-con mr-t">
-              <input type="checkbox" name="chk" class="check-box" required />
+              <input
+                type="checkbox"
+                id="from_terms"
+                name="terms"
+                class="check-box"
+                required
+              />
               <label for="chk"
                 >I accept <a href="#">Terms & Conditions</a></label
               >
             </div>
-            <input type="submit" value="Submit" id="btn" />
+            <input type="submit" onclick="sendMail()" value="Submit" id="btn" />
           </form>
         </div>
       </div>
@@ -159,13 +181,8 @@
       </div>
       <div>
         <h1>Manufacturing Unit</h1>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.5372794693617!2d79.83620901491575!3d13.926583890234543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d1a2e61512fdb%3A0xb6ed906127505ebe!2sCrest%20Cellulose%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1674795470253!5m2!1sen!2sin"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30978.851372337936!2d79.786461!3d13.937371!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6d8f5f1636800b73!2sCoastal%20Drugs!5e0!3m2!1sen!2sin!4v1675684945255!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
     <footer>

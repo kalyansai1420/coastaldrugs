@@ -32,6 +32,7 @@ body {
 
 /* ---------------------------Header--------------------- */
 
+
 header {
   position: fixed;
   top: 0;
@@ -51,20 +52,21 @@ header.sticky {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 header .logo {
-  margin-top: -10px;
+  margin-top: -5px;
 }
 header .logo > img {
-  height: 40px;
+  height: 55px;
 }
 header.sticky .logo {
-  margin-top: -10px;
+  margin-top: -5px;
 }
 header.sticky .logo > img {
-  height: 40px;
+  height: 55px;
 }
 
 header.sticky .navigation li a {
   color: #111;
+  
 }
 header.sticky .navigation li a:hover {
   color: #63C0DD;
@@ -75,12 +77,14 @@ header .navigation {
 }
 header .navigation li {
   list-style: none;
+  margin-top: 15px;
   margin-left: 30px;
 }
 header .navigation li a {
   text-decoration: none;
   color: #111;
   font-weight: 500;
+  font-size: 1.2em;
 }
 header .navigation li a:hover {
   color: #63C0DD;
@@ -278,10 +282,10 @@ padding-left: 30px;
 
 .about-section .text{
 margin-bottom: 40px;
-font-size: 16px;
+font-size: 1.3em;
 line-height: 26px;
-color: #848484;
-font-weight: 400;
+color: #111;
+font-weight: 500;
 }
 
 .about-section .list-style-one{
@@ -316,6 +320,7 @@ position: relative;
 padding-left: 120px;
 padding-bottom: 125px;
 }
+
 
 .about-section .image-column .inner-column:before{
 position: absolute;
