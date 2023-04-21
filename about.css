@@ -281,7 +281,10 @@ section {
   color: #111;
   font-weight: 500;
 }
-
+.sec-title .h2title {
+  font-size: 0.8em;
+  color: red;
+}
 .about-section .list-style-one {
   margin-bottom: 45px;
 }
@@ -306,7 +309,7 @@ section {
 .certifications {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
-    url(./img/cd\ \(1\).jpeg);
+    url(img/cd\ \(1\).jpeg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -316,14 +319,13 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
-.certification-title{
+.certification-title {
   color: #fff;
   font-size: 2em;
   margin-bottom: 20px;
 }
-.certification-logo img{
+.certification-logo img {
   height: 100px;
   object-fit: contain;
 }
@@ -604,17 +606,17 @@ footer p {
   .image-column {
     display: none;
   }
-  .img-column{
+  .img-column {
     display: none;
   }
   .inner-column {
     width: 90vw;
   }
-  .certification-logo{
+  .certification-logo {
     display: flex;
     flex-direction: column;
   }
-  .certification-logo img{
+  .certification-logo img {
     margin-bottom: 20px;
   }
   .sec-title h2 {
