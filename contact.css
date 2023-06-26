@@ -311,6 +311,11 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked {
   accent-color: #63c0dd;
 }
+.error-message {
+  color: red;
+  
+  margin-top: 5px;
+}
 /*-------------iframe----------------*/
 .iframe-con {
   display: flex;

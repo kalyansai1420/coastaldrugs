@@ -105,9 +105,10 @@
                   name="user_name"
                   class="ips br-n bx-s"
                   placeholder="Your Name"
-                  required
                 />
                 <i class="fa fa-user pos-u"></i>
+                <span id="from_name_error" class="error-message"></span>
+
               </div>
               <div class="col-1 mr-b">
                 <input
@@ -118,9 +119,10 @@
                   id="phone"
                   class="ips bx-s br-n"
                   placeholder="Phone number"
-                  required
                 />
                 <i class="fa fa-phone pos-u-1"></i>
+                <span id="from_number_error" class="error-message"></span>
+
               </div>
               <div class="col-1 mr-b">
                 <input
@@ -129,16 +131,18 @@
                   name="user_email"
                   class="ips bx-s br-n"
                   placeholder="Email Id"
-                  required
+                  
                 />
                 <i class="fa fa-envelope pos-u"></i>
+                <span id="from_email_error" class="error-message"></span>
+
               </div>
               <div class="col-1 mr-b">
                 <select
                   name="check"
                   id="from_check"
                   class="ips bx-s br-n"
-                  required
+                  
                 >
                   <option value="" disabled selected class="dis">
                     Please Select
@@ -162,6 +166,8 @@
                 placeholder="Message"
               ></textarea>
               <i class="fa fa-envelope-open-o pos-m"></i>
+              <span id="from_message_error" class="error-message"></span>
+
             </div>
 
             <div class="check-box-con mr-t">

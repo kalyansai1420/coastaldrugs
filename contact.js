@@ -1,99 +1,78 @@
-const from_name = document.getElementById('from_name');
-const from_number = document.getElementById('from_number');
-const from_check = document.getElementById('from_check');
-const from_email = document.getElementById('from_email');
-const from_message = document.getElementById('from_message');
-const from_terms = document.getElementById('from_terms');
-const contactForm = document.getElementById('contact-form');
-const errorElement = document.getElementById('error');
-const successMsg = document.getElementById('success-msg');
-const submitBtn = document.getElementById('submit');
+// function sendMail(params) {
+//     var tempParams = {
+//         from_name: document.getElementById("from_name").value,
+//         from_number: document.getElementById("from_number").value,
+//         from_email: document.getElementById("from_email").value,
+//         from_message: document.getElementById("from_message").value,
+//         from_check: document.getElementById("from_check").value,
+//         from_terms: document.getElementById("from_terms").value
 
-window.onload = function () {
-    document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-            event.preventDefault();
-            this.contact_number.value = null;
-            this.user_name.value = null;
-            this.user_email.value = null;
-            this.message.value = null;
-            this.check.value = null;
-            this.terms.value = null;
+//     };
+//     emailjs.send('template1', 'template_id', tempParams)
+//         .then(function (res) {
+//             console.log("success", res.status);
+//         })
 
-            e.preventDefault();
+// }
+function sendMail() {
+    var fromName = document.getElementById("from_name").value;
+    var fromNumber = document.getElementById("from_number").value;
+    var fromEmail = document.getElementById("from_email").value;
+    var fromMessage = document.getElementById("from_message").value;
+    var fromCheck = document.getElementById("from_check").checked;
 
-            if (from_name.value.length < 3) {
-                errorElement.innerHTML = 'Your name should be at least 3 characters long.';
-                return false;
-            }
+    // Regular expression for phone number (accepts only digits and optional dashes)
+    var phoneRegex = /^\d+(-\d+)*$/;
 
-            if (!(from_email.value.includes('.') && (email.value.includes('@')))) {
-                errorElement.innerHTML = 'Please enter a valid email address.';
-                return false;
-            }
+    // Regular expression for email validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            if (!emailIsValid(from_email.value)) {
-                errorElement.innerHTML = 'Please enter a valid email address.';
-                return false;
-            }
+    // Reset error messages
+    document.getElementById("from_name_error").textContent = "";
+    document.getElementById("from_number_error").textContent = "";
+    document.getElementById("from_email_error").textContent = "";
+    document.getElementById("from_message_error").textContent = "";
 
-            if (from_message.value.length < 10) {
-                errorElement.innerHTML = 'Please write a longer message.';
-                return false;
-            }
-            if (from_number.value.lenght >= 10) {
-                errorElement.innerHTML = 'Please write valid number.';
-                return false;
-            }
+    // Check conditions
+    var isValid = true;
 
-            errorElement.innerHTML = '';
-            successMsg.innerHTML = 'Thank you! I will get back to you as soon as possible.';
+    if (fromName.length < 4) {
+        document.getElementById("from_name_error").textContent = "Name should have at least 4 characters";
+        isValid = false;
+    }
 
-            e.preventDefault();
-            setTimeout(function () {
-                successMsg.innerHTML = '';
-                document.getElementById('contact-form').reset();
-            }, 6000);
+    if (!phoneRegex.test(fromNumber)) {
+        document.getElementById("from_number_error").textContent = "Phone number should be valid";
+        isValid = false;
+    }
 
-            return true;
+    if (!emailRegex.test(fromEmail)) {
+        document.getElementById("from_email_error").textContent = "Email should be valid";
+        isValid = false;
+    }
 
+    if (fromMessage.length < 10) {
+        document.getElementById("from_message_error").textContent = "Message should have at least 10 characters";
+        isValid = false;
+    }
 
+    if (!isValid) {
+        return;
+    }
 
-            // these IDs from the previous steps
-            emailjs.sendForm("contact_service", "contact-form", this).then(
-                function () {
-                    console.log("SUCCESS!");
-                },
-                function (error) {
-                    console.log("FAILED...", error);
-                }
-            );
-        });
-};
-
-
-function sendMail(params) {
+    // If all conditions pass, send the email
     var tempParams = {
-        from_name: document.getElementById("from_name").value,
-        from_number: document.getElementById("from_number").value,
-        from_email: document.getElementById("from_email").value,
-        from_message: document.getElementById("from_message").value,
-        from_check: document.getElementById("from_check").value,
-        from_terms: document.getElementById("from_terms").value
-
+        from_name: fromName,
+        from_number: fromNumber,
+        from_email: fromEmail,
+        from_message: fromMessage,
+        from_check: fromCheck
     };
+
     emailjs.send('template1', 'template_id', tempParams)
         .then(function (res) {
             console.log("success", res.status);
-        })
-
+        });
 }
 
 
-
-const emailIsValid = from_email => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-submitBtn.addEventListener('click', validate);
