@@ -83,7 +83,7 @@ function sendMail(params) {
         from_terms: document.getElementById("from_terms").value
 
     };
-    emailjs.send('service_o3c59bj', 'template_xcphb3k', tempParams)
+    emailjs.send('template1', 'template_id', tempParams)
         .then(function (res) {
             console.log("success", res.status);
         })

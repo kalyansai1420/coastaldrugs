@@ -309,7 +309,7 @@ section {
 .certifications {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
-    url(img/cd\ \(1\).jpeg);
+    url(./gallery/Exterior/14.jpeg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -508,7 +508,7 @@ footer p {
     position: relative;
     width: 40px;
     height: 40px;
-    background: url(./img/menu.png);
+    background: url(./icons/menu.png);
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
@@ -517,7 +517,7 @@ footer p {
     filter: invert(1);
   }
   .menuToggle.active {
-    background: url(./img/close.png);
+    background: url(./icons/close.png);
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
